@@ -70,24 +70,21 @@
 
 .down-card {
     background-color: rgb(186, 194, 186);
-    width: 10px;
+    width: 100px; /* Disesuaikan */
     height: 130px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-grow: 1;
+    text-align: center;
 }
-
 
 .judul-bukunya {
-    width: 100px;
+    width: 80%; /* Disesuaikan agar gambar sesuai */
+    height: auto;
 }
 
-.judul-down {
-    color: rgb(9, 9, 9);
-}
 
 
 /* discover */
