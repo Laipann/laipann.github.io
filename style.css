@@ -80,23 +80,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;   
-     
 }
 
 .down-card {
     background-color: rgb(186, 194, 186);
-<<<<<<< HEAD
     width: 100px; 
-=======
-    width: 10px;
->>>>>>> parent of 500cf6b (commit ke 4)
     height: 130px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-<<<<<<< HEAD
     text-align: center;
     flex-grow: 1;
 }
@@ -109,10 +103,9 @@
 .down-card .judul {
     position: absolute;
     margin-top: 100px;
-} 
-=======
     flex-grow: 1;
-}
+} 
+
 
 
 .judul-bukunya {
@@ -122,7 +115,7 @@
 .judul-down {
     color: rgb(9, 9, 9);
 }
->>>>>>> parent of 500cf6b (commit ke 4)
+
 
 
 .card-list {
