@@ -246,6 +246,24 @@
     
 }
 
+
+@media (max-width: 768px) {
+    .waves {
+        
+        padding-top: 290px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 .wavesAtas img {
     height: 140px;
     position: absolute;
