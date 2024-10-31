@@ -214,11 +214,13 @@
     position: fixed;
     padding-top: 210px;
     width: 100%;
+    bottom: 0;
 }
 
 .waves img {
     width: 100%;
-    height: 600px;
+    height: auto; /* Mengatur tinggi otomatis agar lebih fleksibel di mobile */
+    max-height: 600px;
 }
 
 .waves a {
@@ -234,6 +236,19 @@
     position: absolute;
     
 }
+
+@media (max-width: 768px) {
+    .waves {
+        padding-top: 0; /* Hilangkan padding pada layar kecil */
+    }
+
+    .waves img {
+        height: auto; /* Tinggi disesuaikan otomatis pada layar kecil */
+    }
+}
+
+
+
 
 .wavesAtas img {
     height: 140px;
