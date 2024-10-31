@@ -104,8 +104,17 @@
 .down-card .judul {
     position: absolute;
     margin-top: 100px;
-} 
+    flex-grow: 1;
+}
 
+
+.judul-bukunya {
+    width: 100px;
+}
+
+.judul-down {
+    color: rgb(9, 9, 9);
+}
 
 .card-list {
     text-align: center; /* Untuk memastikan gambar dan teks berada di tengah */
@@ -223,6 +232,14 @@
     height: auto; /* Mengatur tinggi otomatis agar lebih fleksibel di mobile */
     max-height: 600px;
 }
+
+@media (max-width: 768px) {
+    .waves {
+        padding-top: 210px;
+    }
+}
+
+
 
 .waves a {
     display: flex;
