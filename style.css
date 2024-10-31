@@ -237,18 +237,36 @@
     
 }
 
-@media (max-width: 768px) {
-    .waves {
-        padding-top: 0; /* Hilangkan padding pada layar kecil */
-    }
+.wavesAtas img {
+    height: 140px;
+    position: absolute;
+}
 
-    .waves img {
-        height: auto; /* Tinggi disesuaikan otomatis pada layar kecil */
-    }
+.wavesAtas a {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 
 
+@media (max-width: 768px) {
+    .waves {
+        padding-top: 0;
+        bottom: 0;
+    }
+
+    .waves img {
+        height: auto; /* Mengatur tinggi otomatis di layar kecil */
+    }
+
+    .waves a {
+        padding: 20px; /* Sesuaikan padding untuk tampilan mobile */
+    }
+}
 
 .wavesAtas img {
     height: 140px;
