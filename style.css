@@ -80,7 +80,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;   
-     
 }
 
 .down-card {
@@ -105,8 +104,9 @@
     position: absolute;
     margin-top: 100px;
     flex-grow: 1;
-}
 
+}
+ 
 
 .judul-bukunya {
     width: 100px;
@@ -220,17 +220,14 @@
 }
 
 .waves {
-    width: 100%;
-    height: 50px;
-    background-color: #E8E8E8;
     position: fixed;
-    bottom: 0;
+    padding-top: 210px;
+    width: 100%;
 }
 
 .waves img {
     width: 100%;
-    height: auto; /* Mengatur tinggi otomatis agar lebih fleksibel di mobile */
-    max-height: 600px;
+    height: 600px;
 }
 
 @media (max-width: 768px) {
@@ -255,6 +252,24 @@
     
 }
 
+
+@media (max-width: 768px) {
+    .waves {
+        
+        padding-top: 290px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 .wavesAtas img {
     height: 140px;
     position: absolute;
@@ -268,9 +283,6 @@
     font-weight: bold;
     font-size: 20px;
 }
-
-
-
 
 
 
@@ -334,3 +346,23 @@
 .halaman2 {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
