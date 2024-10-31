@@ -211,9 +211,10 @@
 }
 
 .waves {
-    position: fixed;
-    padding-top: 210px;
     width: 100%;
+    height: 50px;
+    background-color: #E8E8E8;
+    position: fixed;
     bottom: 0;
 }
 
@@ -253,34 +254,6 @@
 
 
 
-@media (max-width: 768px) {
-    .waves {
-        padding-top: 0;
-        bottom: 0;
-    }
-
-    .waves img {
-        height: auto; /* Mengatur tinggi otomatis di layar kecil */
-    }
-
-    .waves a {
-        padding: 20px; /* Sesuaikan padding untuk tampilan mobile */
-    }
-}
-
-.wavesAtas img {
-    height: 140px;
-    position: absolute;
-}
-
-.wavesAtas a {
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-}
 
 
 
