@@ -213,10 +213,9 @@
 
 .pfp-kotak {
     background: url('images/boye.png');
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-size: cover;
-    border-radius: 50%;
 }
 
 .waves {
@@ -228,12 +227,6 @@
 .waves img {
     width: 100%;
     height: 600px;
-}
-
-@media (max-width: 768px) {
-    .waves {
-        padding-top: 210px;
-    }
 }
 
 
@@ -251,20 +244,6 @@
     position: absolute;
     
 }
-
-
-@media (max-width: 768px) {
-    .waves {
-        padding-top: 240px;
-    }
-}
-
-
-
-
-
-
-
 
 
 
@@ -328,15 +307,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 .halaman1 {
     display: block;
     height: 50vh;
@@ -347,6 +317,21 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .waves {
+        padding-top: 310px;
+    }
+}
 
 
 
