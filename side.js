@@ -9,6 +9,20 @@ function back() {
 
 
 
+function reward() {
+    console.log('ini diklik');
+    const profile = document.getElementById('profileSide');
+    const reward = document.getElementById('rewardSide');
+
+    profile.style.display = 'none';
+    reward.style.display = 'block';
+}
+
+
+
+
+
+
 
 
 
@@ -52,24 +66,20 @@ function run(e) {
                     $(this).html(card);
                 });
     
-                $(document).on('click', '.images-card', function () {
-                    const jar = document.getElementById('navbar-jar');
-                    jar.style.display = 'none';
-    
-                    const bookId = $(this).data('bookid'); 
-                    $.ajax({
-                        url: 'https://www.googleapis.com/books/v1/volumes/' + bookId,
-                        success: b => {
-                            const volumeInfo = b.volumeInfo;
-                            const bookDetail = showBookDetail(volumeInfo);
-                            $('.modal-body').html(bookDetail);
-                            $('#bookDetailModal').modal('show'); 
-                        },
-                        error: (e) => {
-                            console.log(e.responseText);
-                        }
-                    });
-                });
+               $('.images-card').on('click', function() {
+                   const id = $(this).data('bookid')
+                $.ajax({
+                    url: 'https://www.googleapis.com/books/v1/volumes/' + id,
+                    success: result => {
+                        const resultBook = result.volumeInfo
+                        const detailBook = showBookDetail(resultBook)
+                        $('.modal-body').html(detailBook)
+                        $('#movieDetailModal').modal('show')
+                    }
+                })
+               })
+
+
             } else {
                 console.log('Tidak cukup hasil dari API untuk menampilkan 6 buku.');
             }
@@ -84,6 +94,26 @@ function run(e) {
                 <img src="${volumeInfo.imageLinks?.thumbnail || 'default-thumbnail.jpg'}" class="images-card" alt='gambar tidak tersedia' data-bookid="${bookId}">
                 <h3 class="title">${volumeInfo.title}</h3> 
         </div>`;
+    }
+
+
+    function showBookDetail(volumeInfo) {
+        return `<div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="${volumeInfo.imageLinks?.thumbnail}" alt="">
+                        <ul class="list-group">
+                            <li class="list-group-item"><h4>${volumeInfo.title}</h4></li>
+                            <li class="list-group-item"><strong>Rilis : </strong>${volumeInfo.publishedDate}</li>
+                            <li class="list-group-item"><strong>Pembuat : </strong>${volumeInfo.authors?.join(', ')}</li>
+                            <li class="list-group-item"><strong>Publisher : </strong>${volumeInfo.publisher}</li>
+                            <li class="list-group-item"><strong>Jumlah Halaman : </strong>${volumeInfo.pageCount} pages</li>
+                            <li class="list-group-item"><strong>Baca Buku : </strong><a href="${volumeInfo.previewLink}" target="_blank">Baca Buku</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md"></div>
+                </div>
+            </div>`;
     }
 
 
@@ -102,7 +132,7 @@ $('.search-button').on('click', function () {
     
         books.forEach(b => {
             const volumeInfo = b.volumeInfo;
-            cards += showCard(volumeInfo, b.id); // Sesuaikan dengan struktur data Google Books
+            cards += showCard(volumeInfo, b.id); 
         });   
         $('.movie-container').html(cards);
     
@@ -112,7 +142,7 @@ $('.search-button').on('click', function () {
                 url : 'https://www.googleapis.com/books/v1/volumes/' + $(this).data('imdbid'),
                 success : b => {
                     const volumeInfo = b.volumeInfo;
-                    const bookDetail = showBookDetail(volumeInfo); // Sesuaikan dengan struktur data Google Books
+                    const bookDetail = showBookDetail(volumeInfo); 
                     $('.modal-body').html(bookDetail);
                 },
                 error: (e) =>  {
@@ -175,6 +205,23 @@ function cards1(volumeInfo, bookId) {
 
 
 
+// $(document).on('click', '.images-card', function () {
+//     const jar = document.getElementById('navbar-jar');
+//     jar.style.display = 'none';
 
+//     const bookId = $(this).data('bookid'); 
+//     $.ajax({
+//         url: 'https://www.googleapis.com/books/v1/volumes/' + bookId,
+//         success: b => {
+//             const volumeInfo = b.volumeInfo;
+//             const bookDetail = showBookDetail(volumeInfo);
+//             $('.modal-body').html(bookDetail);
+//             $('#bookDetailModal').modal('show'); 
+//         },
+//         error: (e) => {
+//             console.log(e.responseText);
+//         }
+//     });
+// });
 
 
