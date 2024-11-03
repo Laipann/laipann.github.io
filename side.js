@@ -124,7 +124,7 @@ function run(e) {
 // search 
 $('.search-button').on('click', function () {
     $.ajax({
-        url : 'https://www.googleapis.com/books/v1/volumes?q=' + $('.input-keywoard').val() + '&maxResults=20&startIndex=20' ,
+        url : 'https://www.googleapis.com/books/v1/volumes?q=' + $('.input-keywoard').val() + '&maxResults=20&startIndex=25' ,
         success : result  => {
         const books = result.items;
         
@@ -160,11 +160,13 @@ $('.search-button').on('click', function () {
 function showCard(volumeInfo, id) {
     return `<div class="col-md-4 my-3">
         <div class="card">
-            <img src="${volumeInfo.imageLinks?.thumbnail || 'default-thumbnail.jpg'}" class="card-img-topss">
-            <div class="card-body">
-            <h5 class="card-title">${volumeInfo.title}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">${volumeInfo.publishedDate}</h6>
-            <a href="#" class="btn btn-primary modal-detail-button" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-imdbid="${id}">Lihat Buku</a>
+            <div class="pemisahBook">
+                <img src="${volumeInfo.imageLinks?.thumbnail || 'default-thumbnail.jpg'}" class="card-img-topss">
+                <div class="card-body">
+                <h5 class="card-title">${volumeInfo.title}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">${volumeInfo.publishedDate}</h6>
+                <a href="#" class="btn btn-primary modal-detail-button" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-imdbid="${id}">Lihat Buku</a>
+                </div>
             </div>
         </div>
     </div>`;
