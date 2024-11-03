@@ -164,6 +164,7 @@ function showCard(volumeInfo, id) {
                 <img src="${volumeInfo.imageLinks?.thumbnail || 'default-thumbnail.jpg'}" class="card-img-topss">
                 <div class="card-body">
                 <h5 class="card-title">${volumeInfo.title}</h5>
+                <h5 class="card-title" >${volumeInfo.categories}</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">${volumeInfo.publishedDate}</h6>
                 <a href="#" class="btn btn-primary modal-detail-button" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-imdbid="${id}">Lihat Buku</a>
                 </div>
